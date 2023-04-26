@@ -328,6 +328,9 @@ document.addEventListener('keydown', (event) => {
             lastTime += performance.now() - pausedTime;
         }
     }
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.code)) {
+        event.preventDefault();
+    }
 });
 
 document.addEventListener('keyup', (event) => {

@@ -349,14 +349,7 @@ canvas.addEventListener('click', (event) => {
     } else if (!gameStarted) {
         gameStarted = true;
         backgroundMusic.play(); // Start playing the background music
-    } else if (paused) {
-        paused = false;
-        backgroundMusic.play(); // Resume the background music
-    } else {
-        paused = true;
-        backgroundMusic.pause(); // Pause the background music
     }
 });
-
 
 requestAnimationFrame(gameLoop);

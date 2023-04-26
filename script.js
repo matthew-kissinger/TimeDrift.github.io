@@ -263,7 +263,7 @@ function drawStartingScreen() {
     const instructions = [
         'Instructions:',
         'Arrow keys to move',
-        'Spacebar to drift',
+        'Spacebar to drift (Time Slows)',
         'Escape to pause',
         '',
         'Click to Start',

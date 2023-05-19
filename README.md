@@ -21,7 +21,7 @@ Your score is based on the amount of time you are able to stay on the road. The 
 The game runs in the browser and doesn't need to be installed. You just need to clone the repo and open `index.html` in your preferred browser.
 
 ```bash
-git clone https://github.com/timedrift/timedrift.github.io.git
+git clone https://github.com/timedrift/timedrift.github.io.git '''
 
 After cloning the repo, navigate into the project directory and open the index.html file.
 

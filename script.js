@@ -97,7 +97,7 @@ function createObstacle() {
         side: side,
         x: side === 'left'
             ? Math.random() * (canvas.width / 2 - car.width - 40) + 40
-            : Math.random() * (canvas.width / 2 - car.width - 40) + canvas.width / 2,
+            : Math.random() * (canvas.width / 2 - car.width - 40) + canvas.width / 2 + 40,
         y: side === 'left' ? -20 : canvas.height,
         width: car.width, // Use the same width as the player car
         height: car.height, // Use the same height as the player car

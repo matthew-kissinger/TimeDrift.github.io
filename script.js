@@ -97,8 +97,8 @@ function createObstacle() {
     const obstacle = {
         side: side,
         x: side === 'left'
-            ? Math.random() * (canvas.width / 2 - 100) + 40
-            : Math.random() * (canvas.width / 2 - 60) + canvas.width / 2,
+            ? Math.random() * (canvas.width / 2 - 40) + 40  // Adjusted the range of x for left side
+            : Math.random() * (canvas.width / 2 - 40) + canvas.width / 2,  // Adjusted the range of x for right side
         y: side === 'left' ? -20 : canvas.height,
         width: car.width, // Use the same width as the player car
         height: car.height, // Use the same height as the player car
@@ -107,6 +107,7 @@ function createObstacle() {
     };
     obstacles.push(obstacle);
 }
+
 
 // Update the position of obstacles based on their speed and the time drift effect
 function updateObstacles(dt) {

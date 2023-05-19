@@ -91,14 +91,13 @@ function updateCarRotation() {
     }
 }
 
-// Create a new obstacle object with random 
 function createObstacle() {
     const side = Math.random() > 0.5 ? 'left' : 'right';
     const obstacle = {
         side: side,
         x: side === 'left'
-            ? Math.random() * (canvas.width / 2 - 40) + 40  // Adjusted the range of x for left side
-            : Math.random() * (canvas.width / 2 - 40) + canvas.width / 2,  // Adjusted the range of x for right side
+            ? Math.random() * (canvas.width / 2 - car.width - 40) + 40
+            : Math.random() * (canvas.width / 2 - car.width - 40) + canvas.width / 2,
         y: side === 'left' ? -20 : canvas.height,
         width: car.width, // Use the same width as the player car
         height: car.height, // Use the same height as the player car
@@ -107,6 +106,7 @@ function createObstacle() {
     };
     obstacles.push(obstacle);
 }
+
 
 
 // Update the position of obstacles based on their speed and the time drift effect

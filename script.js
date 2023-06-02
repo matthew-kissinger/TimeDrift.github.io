@@ -93,19 +93,22 @@ function updateCarRotation() {
 
 function createObstacle() {
     const side = Math.random() > 0.5 ? 'left' : 'right';
+    const centerBias = Math.pow(Math.random(), 2); // Creates a quadratic distribution
+
     const obstacle = {
         side: side,
         x: side === 'left'
-            ? Math.random() * (canvas.width / 2 - car.width - 40) + 40
-            : Math.random() * (canvas.width / 2 - car.width - 40) + canvas.width / 2 + 40,
+            ? (1 - centerBias) * (canvas.width / 2 - car.width - 40) + 40
+            : centerBias * (canvas.width / 2 - car.width - 80) + canvas.width / 2 + 40,
         y: side === 'left' ? -20 : canvas.height,
-        width: car.width, // Use the same width as the player car
-        height: car.height, // Use the same height as the player car
+        width: car.width,
+        height: car.height,
         speed: roadSpeed,
         img: side === 'left' ? greenVanImg : blueCarImg,
     };
     obstacles.push(obstacle);
 }
+
 
 
 
